@@ -1,5 +1,12 @@
 {
   "dependencies": {
     "http-server": "^0.11.1"
-  }
+  },
+  "name": "Gulp_Basics",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/CodyJReed/Gulp_Basics.git",
+  "author": "Cody Reed <cody2j2reed@gmail.com>",
+  "license": "MIT",
+  "private": false
 }
