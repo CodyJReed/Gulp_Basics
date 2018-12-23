@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "gulp": "^4.0.0",
     "http-server": "^0.11.1"
   },
   "name": "Gulp_Basics",
@@ -11,6 +10,9 @@
   "license": "MIT",
   "private": false,
   "devDependencies": {
-    "gulp-concat": "^2.6.1"
+    "gulp": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-uglify": "^3.0.1"
   }
 }
