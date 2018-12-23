@@ -7,11 +7,13 @@ const gulp = require("gulp"),
   sass = require("gulp-sass"),
   maps = require("gulp-sourcemaps");
 
-// Concat js files in js folder, and create new app.js file. place into js folder
+// Concat js files in js folder, and create new app.js, and ...map file. place into js folder
 function concatScripts(cb) {
   gulp
     .src(["js/jquery.js", "js/sticky/jquery.sticky.js", "js/main.js"])
+    .pipe(maps.init())
     .pipe(concat("app.js"))
+    .pipe(maps.write("./"))
     .pipe(gulp.dest("js"));
   cb();
 }
@@ -33,7 +35,7 @@ function compileSass(cb) {
     .src("scss/application.scss")
     .pipe(maps.init())
     .pipe(sass())
-    .pipe(write("./"))
+    .pipe(maps.write("./"))
     .pipe(gulp.dest("css"));
   cb();
 }
