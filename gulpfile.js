@@ -5,6 +5,7 @@ const gulp = require("gulp"),
   uglify = require("gulp-uglify"),
   rename = require("gulp-rename");
 
+// Concat js files in js folder, and create new app.js file. place into js folder
 function concatScripts(cb) {
   gulp
     .src(["js/jquery.js", "js/sticky/jquery.sticky.js", "js/main.js"])
@@ -13,6 +14,7 @@ function concatScripts(cb) {
   cb();
 }
 
+// Take app.js files and create new minified app.min.js file. place into js folder
 function minifyScripts(cb) {
   gulp
     .src("js/app.js")
