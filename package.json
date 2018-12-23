@@ -9,5 +9,8 @@
   "repository": "https://github.com/CodyJReed/Gulp_Basics.git",
   "author": "Cody Reed <cody2j2reed@gmail.com>",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "devDependencies": {
+    "gulp-concat": "^2.6.1"
+  }
 }

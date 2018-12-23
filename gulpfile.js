@@ -1,6 +1,15 @@
-function defaultTask(cb) {
-  console.log("This is the default task!");
+"use strict";
+
+const { series } = require("gulp");
+
+function hello(cb) {
+  console.log("Hello!");
   cb();
 }
 
-exports.default = defaultTask;
+function goodbye(cb) {
+  console.log("Goodbye!");
+  cb();
+}
+
+exports.default = series(hello, goodbye);
