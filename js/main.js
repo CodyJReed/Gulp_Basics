@@ -16,5 +16,3 @@ $(".main-heading").on("sticky-end", function() {
     border: "none"
   });
 });
-
-const foo = bar;

@@ -10536,6 +10536,4 @@ $(".main-heading").on("sticky-end", function() {
   });
 });
 
-const foo = bar;
-
 //# sourceMappingURL=app.js.map
