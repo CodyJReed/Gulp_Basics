@@ -3,7 +3,9 @@
 const gulp = require("gulp"),
   concat = require("gulp-concat"),
   uglify = require("gulp-uglify"),
-  rename = require("gulp-rename");
+  rename = require("gulp-rename"),
+  sass = require("gulp-sass"),
+  maps = require("gulp-sourcemaps");
 
 // Concat js files in js folder, and create new app.js file. place into js folder
 function concatScripts(cb) {
@@ -21,6 +23,18 @@ function minifyScripts(cb) {
     .pipe(uglify())
     .pipe(rename("app.min.js"))
     .pipe(gulp.dest("js"));
+  cb();
+}
+
+// Take application.scss and compile with gulp-sass/sourcemaps.
+// Create both a application.css and ...map file(s) and place in css folder
+function compileSass(cb) {
+  gulp
+    .src("scss/application.scss")
+    .pipe(maps.init())
+    .pipe(sass())
+    .pipe(write("./"))
+    .pipe(gulp.dest("css"));
   cb();
 }
 
