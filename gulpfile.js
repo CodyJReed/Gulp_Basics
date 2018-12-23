@@ -46,3 +46,4 @@ function goodbye(cb) {
 exports.default = goodbye;
 exports.concat = concatScripts;
 exports.minify = minifyScripts;
+exports.compile = compileSass;
